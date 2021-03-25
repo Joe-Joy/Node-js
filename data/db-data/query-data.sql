@@ -1,6 +1,7 @@
 CREATE TABLE master_family_records (
     family_id INT AUTO_INCREMENT PRIMARY KEY,
-    unique_id VARCHAR(255) NOT NULL name VARCHAR(255) NOT NULL,
+    unique_id VARCHAR(255) NOT NULL ,
+    name VARCHAR(255) NOT NULL,
     position VARCHAR(255) NOT NULL,
     mail_id VARCHAR(255) NOT NULL,
     mob_number BIGINT (10) NOT NULL,
@@ -12,7 +13,8 @@ CREATE TABLE master_family_records (
 
 CREATE TABLE family_members (
     family_id INT AUTO_INCREMENT PRIMARY KEY,
-    unique_id VARCHAR(255) NOT NULL name VARCHAR(255) NOT NULL,
+    unique_id VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
     relationship VARCHAR(255) NOT NULL,
     mail_id VARCHAR(255) NOT NULL,
     mob_number BIGINT (10) NOT NULL,
@@ -66,5 +68,5 @@ ALTER TABLE family_members CHANGE member_item unique_id VARCHAR(255) NOT NULL;
 
 -- update values
 UPDATE master_family_records
-SET unique_id = 'fid001'
-WHERE family_id = "1";
+SET relationship = 'aunty'
+WHERE family_id BETWEEN 8 AND 10;

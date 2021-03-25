@@ -51,7 +51,11 @@ router.put("/update", (req, res) => {
 });
 
 router.delete("/delete", (req, res) => {
-  res.send("delete completed successfully");
-});
+  let family_id = req.query.family_id;
+  var query = `DELETE  FROM family_members WHERE family_id = '${family_id}'`;
+  writesql.query(query, (error, results, fields) => {
+    if (error) res.send(error);
+    res.send("delete sucessfully");
+  });});
 
 module.exports = router;
