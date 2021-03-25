@@ -21,7 +21,7 @@ router.get("/:unique_id", function (req, res) {
 });
 
 router.post("/create", (req, res) => {
-  let firstQuery = 'select concat("FID", MAX(family_id)+ 001) as unique_id from master_family_records';
+  let firstQuery = 'select concat("FID", MAX(family_id)+ 1) as unique_id from master_family_records';
   let name = req.query.name;
   let position = req.query.position;
   let gender = req.query.gender;
@@ -34,10 +34,21 @@ router.post("/create", (req, res) => {
     let secondQuery = `INSERT INTO master_family_records(unique_id,name,position,gender,mob_number,mail_id,age) VALUES ('${unique_id}','${name}','${position}','${gender}','${mob_number}','${mail_id}','${age}')`;
     writesql.query(secondQuery, (error, results) => {
       if (error) console.log(error);
-      res.send("MASTER RECORD CREATED");
+      res.send({ 
+        family_id : unique_id,
+        message : 'Success'
+      });
     });
   });
 });
+
+
+
+
+
+
+
+
 
 router.delete("/delete", (req, res) => {
   let family_id = req.query.family_id;
