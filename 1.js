@@ -1,26 +1,3 @@
-// // let name="ashli";
-// // let position="daughter";
-// // let gender = "female";
-// let family_id = "";
-// let mobnumber = "";
-// let mailid = "";
-
-// if (mobnumber != "" && mailid != "" && family_id != "") {console.log("mobnumber & mailid & fm values updated");} 
-// else if (mobnumber != "" && mailid != "") {console.log("family ID empty");}
-// else if (mailid != "" && family_id != "") {console.log("mobile id empty");}
-// else if (family_id != "" && mobnumber != "") {console.log("mailId mob empty");}
-// else if (mobnumber != "") {console.log("familyid mail values empty");}
-// else if (mailid != "") {console.log("familyid mob values empty");}
-// else if (family_id != "") {console.log("mob mail values empty");}
-// else {console.log("nothing changed");}
-
-
-
-// let age = 15;
-// let result =
-//     (age >= 18) ? "You are eligible to vote." : "You are not eligible to vote yet";
-// console.log(result);
-
 
 // function x(family_id,mailid,mobnumber) {
 //   return mobnumber != "" && mailid != "" && family_id != "" ? console.log("mobnumber & mailid & fm values updated")
@@ -45,7 +22,37 @@ function x(name,position,gender,mob_number,mail_id,age) {
         : name != "" && gender != "" && mob_number != "" && mail_id != "" && age != "" ? console.log ('position is empty')
         : position != "" && gender != "" && mob_number != "" && mail_id != "" && age != "" ? console.log ('name is empty')
         : name != "" && position != "" && gender != "" && mob_number != "" ? console.log ('mail_id , age is empty')
-        : name != "" && position != "" && gender != "" && mob_number != "" ? console.log ('mail_id , age is empty')
+        : name != "" && position != "" && gender != "" && mail_id != "" ? console.log ('mob_number , age is empty')
+        : name != "" && position != "" && mob_number != "" && mail_id != "" ? console.log ('gender , age is empty')
+        : name != "" && gender != "" && mob_number != "" && mail_id != "" ? console.log ('position , age is empty')
+        : position != "" && gender != "" && mob_number != "" && mail_id != "" ? console.log ('name , age is empty')
+        : name != "" && position != "" && gender != "" && age != "" ? console.log ('mob_number, mail_id is empty')
+        : name != "" && position != "" && mob_number != "" && age != "" ? console.log ('gender, mail_id is empty')
+        : name != "" && gender != "" && mob_number != "" && age != "" ? console.log ('position, mail_id is empty')
+        : position != "" && gender != "" && mob_number != "" && age != "" ? console.log ('name, mail_id is empty')
+        : name != "" && position != "" && mail_id != "" && age != "" ? console.log ('gender, mob_number is empty')
+        : name != "" && gender != "" && mail_id != "" && age != "" ? console.log ('position, mob_number is empty')
+        : position != "" && gender != "" && mail_id != "" && age != "" ? console.log ('name, mob_number is empty')
+        : name != "" && mob_number != "" && mail_id != "" && age != "" ? console.log ('position, gender is empty')
+        : position != "" && mob_number != "" && mail_id != "" && age != "" ? console.log ('name, gender is empty')
+        : gender != "" && mob_number != "" && mail_id != "" && age != "" ? console.log ('position, name is empty')
+        : name != "" && position != "" && gender != "" ? console.log ('mob_number, mail_id, age is empty')
+        : name != "" && position != "" && mob_number != "" ? console.log ('gender, mail_id, age is empty')
+        : name != "" && gender != "" && mob_number != "" ? console.log ('position, mail_id, age is empty')
+        : position != "" && gender != "" && mob_number != "" ? console.log ('name, mail_id, age is empty')
+        : name != "" && position != "" && mail_id != "" ? console.log ('mob_number, gender, age is empty')
+        : name != "" && gender != "" && mail_id != "" ? console.log ('mob_number, position, age is empty')
+        : position != "" && gender != "" && mail_id != "" ? console.log ('mob_number, name, age is empty')
+        : name != "" && position != "" && age != "" ? console.log ('mob_number, mail_id, gender is empty')
+        : name != "" && gender != "" && age != "" ? console.log ('mob_number, mail_id, position is empty')
+        : position != "" && gender != "" && age != "" ? console.log ('mob_number, mail_id, name is empty')
+        : position != "" && gender != "" && age != "" ? console.log ('mob_number, mail_id, name is empty')
+        : mob_number != "" && mail_id != "" && age != "" ? console.log ('name, position, gender is empty')
+        : mob_number != "" && mail_id != "" && age != "" ? console.log ('name, position, gender is empty')
+
+
+
         : console.log('nothing changed');
 }
-x('as','father','male','3456789765','','' );
+x('','','','a3333','22','2' );
+

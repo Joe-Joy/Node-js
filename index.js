@@ -8,10 +8,10 @@ const index = require("./routes/index");
 const app = express();
 app.use(cookieParser());
 
-
 app.use("/", index);
-app.use("/family_records", family_records); 
+app.use("/family_records", family_records);
 app.use("/master_records", master_records);
+
 
 const port = process.env.PORT || 5000;
 
