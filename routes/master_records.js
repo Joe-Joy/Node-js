@@ -81,13 +81,9 @@ router.put("/update", (req, res) => {
   let unique_id = req.query.unique_id;
   var x  = ["name", "position", "gender", "mob_number", "mail_id", "gender"];
   var y = [req.query.name,req.query.position,req.query.gender, req.query.mob_number,req.query.mail_id,req.query.age]; 
-  console.log(y)
   var object = test.toUpdate(x,y);
-  console.log(object);
   const columns = Object.keys(object);
-  console.log(columns);
   const values = Object.values(object);  
-  console.log(values);
   let sqlquery = "UPDATE master_family_records SET " + columns.join(" = ? ,") + " = ?";
   let sqlConditions = `WHERE unique_id = '${unique_id}' `;
   const sql = sqlquery + " " + sqlConditions;

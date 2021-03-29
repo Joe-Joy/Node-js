@@ -1,5 +1,3 @@
-
-
 // coverting 2 arrays into one object{}
 function toObjectFrom2Array(columnNameModified, columnValuesModified) {
   var insertObject = {};
