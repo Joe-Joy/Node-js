@@ -38,6 +38,22 @@ router.post("/create", (req, res) => {
   });
 });
 
+router.post("/getUniqueId", (req, res) => {
+  let name = req.query.name;
+  let mob_number = req.query.mob_number;
+  if (name != undefined && mob_number != undefined) {
+    var query = `SELECT unique_id FROM family_members WHERE name='${name}' AND mob_number='${mob_number}'`;
+  } else {
+    res.status(404).send("no input");
+  }
+  writesql.query(query, (error, results) => {
+    if (error) {
+      res.status(404).send("query is invalid");
+    }
+    res.send(results[0]);
+  });
+});
+
 
 router.put("/update", (req, res) => {
   let unique_id = req.query.unique_id;
