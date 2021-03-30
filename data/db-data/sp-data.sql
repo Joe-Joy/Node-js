@@ -1,5 +1,4 @@
-
--- store procedure
+-- normal store procedure
 DELIMITER / / CREATE PROCEDURE unique_ids_a() BEGIN
 select
     *
@@ -8,9 +7,7 @@ from
 
 END / / DELIMITER;
 
-
-
-
+-- dynamic store procedure
 DROP PROCEDURE IF EXISTS sp_fmly_map;
 DELIMITER //
 CREATE PROCEDURE sp_fmly_map(unique_id VARCHAR(255))
@@ -24,7 +21,9 @@ BEGIN
    END IF;
 END //
 DELIMITER ;
+
 CALL sp_fmly_map('FID1');
+
 
 -- alter table default values
 ALTER TABLE

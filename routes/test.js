@@ -30,7 +30,6 @@ module.exports = {
   toObjectFrom2Array,
   toUpdate
 }
-// module.exports = family_members;
 
 
 
