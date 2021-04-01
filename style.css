@@ -1,7 +1,71 @@
-table,th,td {
-    border : 1px solid black;
-    border-collapse: collapse;
-  }
-  th,td {
-    padding: 5px;
-  }
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#form {
+  margin: 30px 590px;
+  background-color: lightpink;
+  padding-top: 10px;
+  padding-left: 30px;
+  line-height: 25px;
+  border: 1px solid black;
+  position: relative;
+}
+h3,
+h4 {
+  text-align: center;
+  width: 260px;
+  font-weight: 700px;
+}
+label {
+  margin-bottom: 50px;
+}
+input {
+  margin-bottom: 10px;
+}
+.form_input {
+  padding: 5px;
+  width: 250px;
+}
+#submit {
+  margin-left: 80px;
+  margin-top: 10px;
+  width: 100px;
+  padding: 5px;
+  background-color: darkgrey;
+  transition: 1s;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#submit::before,
+#submit::after {
+  position: absolute;
+  background: #eee;
+  z-index: -1;
+  transition: 1s;
+  content: "";
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#submit:hover::before {
+  background: #fff;
+}
+
+#submit:hover::after {
+  background: #fff;
+  color: black;
+}
+
+#submit:hover {
+  background: #fff;
+  color: black;
+}

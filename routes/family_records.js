@@ -25,6 +25,7 @@ router.get("/:unique_id", function (req, res) {
 
 router.post("/create", (req, res) => {
   let unique_id = req.query.unique_id;
+  console.log(unique_id);
   let name = req.query.name;
   let relationship = req.query.relationship;
   let gender = req.query.gender;

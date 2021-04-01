@@ -8,17 +8,39 @@
     <title>ajax request</title>
   </head>
   <body>
-    <h2>The XMLHttpRequest Object</h2>
-
+    
+    <form id ="form" action="http://localhost:5000/" method="GET">
+      <h3>CHURCH APPLICATION</h3>
+      <h4>Family Members</h4>
+      <label class="form_input" for="unique_id">Unique Id:</label><br>
+      <input class="form_input" type="text" id="fname" name="unique_id" required><br>
+      <label class="form_input" for="name">Name:</label><br>
+      <input class="form_input" type="text" id="name" name="name" required><br>
+      <label class="form_input" for="lname">Relationship:</label><br>
+      <input class="form_input" type="text" id="relationship" name="relationship" required><br>
+      <label class="form_input" for="lname"> Gender:</label><br>
+      <input class="form_input" type="text" id="gender" name="gender" required><br>
+      <label class="form_input" for="lname">Mobile_number:</label><br>
+      <input class="form_input" type="text" id="mob_number" name="mob_number" required><br>
+      <label class="form_input" for="lname">Email Id:</label><br>
+      <input class="form_input" type="text" id="relationship" name="relationship" required><br>
+      <label class="form_input" for="lname">Age:</label><br>
+      <input class="form_input" type="text" id="age" name="age" required><br>
+      <input id="submit" type="submit" value="Submit" onclick="login()" >
+    </form>
+    
+      <!-- <h2>The XMLHttpRequest Object</h2>_
     <form action="">
-      <select name="customers" onchange="showCustomer(this.value)">
+      <select name="customers" onchange="familyDetails(this.value)">
         <option value="">Select a customer:</option>
         <option value="family_records">family records</option>
         <option value="master_records ">master records</option>
       </select>
     </form>
     <br>
-    <div id="txtHint">Customer info will be listed here...</div>
+    <div id="txtHint">Customer info will be listed here...</div> -->
+
+      
 
     <scrip>
       <script type="text/javascript" src="script.js"></script>

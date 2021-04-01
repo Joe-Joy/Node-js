@@ -1,6 +1,6 @@
 CREATE TABLE master_family_records (
     family_id INT AUTO_INCREMENT PRIMARY KEY,
-    unique_id VARCHAR(255) NOT NULL ,
+    unique_id VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
     position VARCHAR(255) NOT NULL,
     mail_id VARCHAR(255) NOT NULL,
@@ -25,29 +25,57 @@ CREATE TABLE family_members (
 );
 
 -- alter table
-ALTER TABLE Master_User ADD position VARCHAR(255) NOT NULL;
+ALTER TABLE
+    Master_User
+ADD
+    position VARCHAR(255) NOT NULL;
 
 -- delete row
-DELETE FROM master_family_records WHERE family_id = 2;
+DELETE FROM
+    master_family_records
+WHERE
+    family_id = 2;
 
 -- insert values
-INSERT INTO Master_User (name, head, gender, mob_number, mail_id)
-VALUES (
-        "Joseph",
-        "head of the  house",
+INSERT INTO
+    master_family_records (
+        unique_id,
+        name,
+        position,
+        gender,
+        mob_number,
+        mail_id,
+        age
+    )
+VALUES
+    (
+        "FID1" "Joseph",
+        "father",
         "male",
         9487261448,
-        "joseph@gmail.com"
+        "joseph@gmail.com",
+        58
     );
 
-INSERT INTO Sub_family (id,name,gender,mob_number,mail_id, relationship )
-VALUES(
-        1,
+INSERT INTO
+    family_members (
+        unique_id,
+        name,
+        relationship,
+        gender,
+        mob_number,
+        mail_id,
+        age
+    )
+VALUES
+(
+        "FID1",
         "kulandai",
+        "spouse",
         "female",
         965236968,
         "kulandai@gmail.com",
-        "spouse"
+        55
     );
 
 -- inner join
@@ -57,21 +85,26 @@ SELECT
         ORDER BY
             name SEPARATOR ','
     )
-FROM Master_User AS a INNER JOIN Sub_family AS b ON a.id = b.id;
+FROM
+    Master_User AS a
+    INNER JOIN Sub_family AS b ON a.id = b.id;
 
 -- inner join
-SELECT * FROM master_family_records as mf
-INNER JOIN family_members as fm ON mf.member_item = fm.member_item;
+SELECT
+    *
+FROM
+    master_family_records as mf
+    INNER JOIN family_members as fm ON mf.member_item = fm.member_item;
 
 -- altaer column old to change a new column
-ALTER TABLE family_members CHANGE member_item unique_id VARCHAR(255) NOT NULL;
+ALTER TABLE
+    family_members CHANGE member_item unique_id VARCHAR(255) NOT NULL;
 
 -- update values
-UPDATE master_family_records
-SET relationship = 'aunty'
-WHERE family_id BETWEEN 8 AND 10;
-
-
-
-
-
+UPDATE
+    master_family_records
+SET
+    relationship = 'aunty'
+WHERE
+    family_id BETWEEN 8
+    AND 10;
